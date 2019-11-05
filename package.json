@@ -1,6 +1,6 @@
 {
   "name": "@eclass/semantic-release-custom-plugin",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "semantic-release plugin to deploy app",
   "main": "src/index.js",
   "scripts": {
@@ -101,7 +101,9 @@
       "@semantic-release/changelog",
       [
         "@semantic-release/npm",
-        { "npmPublish": false }
+        {
+          "npmPublish": false
+        }
       ],
       "@semantic-release/git",
       "@semantic-release/github"
