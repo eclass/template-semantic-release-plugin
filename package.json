@@ -51,7 +51,7 @@
     "eslint-plugin-standard": "4.0.1",
     "husky": "4.2.5",
     "lint-staged": "10.2.13",
-    "mocha": "8.1.1",
+    "mocha": "8.1.2",
     "nyc": "15.1.0",
     "nyc-config-common": "1.0.1",
     "prettier-standard": "16.4.1",
