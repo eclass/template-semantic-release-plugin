@@ -62,54 +62,5 @@
   },
   "peerDependencies": {
     "semantic-release": ">=11.0.0 <18.0.0"
-  },
-  "eslintConfig": {
-    "extends": "@eclass"
-  },
-  "eslintIgnore": [
-    "coverage"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
-  "lint-staged": {
-    "{src,test}/**/*.js": [
-      "eslint --fix",
-      "prettier-standard",
-      "git add"
-    ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "renovate": {
-    "automerge": "minor",
-    "extends": [
-      "config:js-lib"
-    ]
-  },
-  "release": {
-    "extends": "@eclass/semantic-release-npm-github-config",
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      [
-        "@semantic-release/npm",
-        {
-          "npmPublish": false
-        }
-      ],
-      "@semantic-release/git",
-      "@semantic-release/github"
-    ]
-  },
-  "nyc": {
-    "extends": "nyc-config-common"
   }
 }
