@@ -1,8 +1,8 @@
 const getError = require('./get-error')
 
 /**
- * @typedef {import('semantic-release').Context} Context
- * @typedef {import('semantic-release').Config} Config
+ * @typedef {import('./types').Context} Context
+ * @typedef {import('./types').Config} Config
  */
 /**
  * @param {Config} pluginConfig -
@@ -13,6 +13,6 @@ const getError = require('./get-error')
  */
 module.exports = (pluginConfig, ctx) => {
   if (!ctx.env.CUSTOM_ENV) {
-    throw getError('CUSTOMERROR')
+    throw getError('CUSTOMERROR', ctx)
   }
 }

@@ -1,11 +1,20 @@
 /**
- * @typedef {import('semantic-release').Context} Context
+ * @typedef {import('./types').Context} Context
+ * @typedef {import('./types').SemanticReleaseError} SemanticReleaseError
  */
+
+const pkg = require('../package.json')
+
+const [homepage] = pkg.homepage.split('#')
+/* eslint-disable no-unused-vars */
 /**
- * @typedef {Object} SemanticReleaseError
- * @property {string} message -
- * @property {string} details -
+ * @param {string} file -
+ * @returns {string} -
+ * @example
+ * const link = linkify(href)
  */
+const linkify = file => `${homepage}/blob/master/${file}`
+/* eslint-enable no-unused-vars */
 
 module.exports = new Map([
   [
@@ -14,7 +23,7 @@ module.exports = new Map([
      * @param {Context} ctx -
      * @returns {SemanticReleaseError} -
      */
-    (ctx) => ({
+    ctx => ({
       message: 'A custom message.',
       details: 'A custom description.'
     })
