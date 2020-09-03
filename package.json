@@ -4,8 +4,7 @@
   "description": "semantic-release plugin to deploy app",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint . --fix",
-    "format": "prettier-standard '{src,test}/**/*.js'",
+    "lint": "prettier-standard --lint '{src,test}/**/*.js'",
     "test": "nyc mocha test"
   },
   "engines": {
